@@ -1,0 +1,57 @@
+{
+    "enable_group_manage": {
+        "description": "启用群写操作（踢人、禁言、改名片、签到、群文件、精华、公告等）",
+        "type": "bool",
+        "hint": "关闭后所有群写操作会被拒绝",
+        "default": true
+    },
+    "enable_message": {
+        "description": "启用消息发送与互动（发群消息、发私聊、合并转发、点赞、戳一戳、签到）",
+        "type": "bool",
+        "hint": "关闭后所有发消息和互动工具会被拒绝",
+        "default": true
+    },
+    "enable_info": {
+        "description": "启用信息查询（群信息、成员、好友、聊天记录、系统消息、媒体等只读工具）",
+        "type": "bool",
+        "hint": "关闭后所有只读查询工具会被拒绝",
+        "default": true
+    },
+    "enable_sensitive_account": {
+        "description": "启用账号凭证（cookies、csrf_token）。默认关闭",
+        "type": "bool",
+        "hint": "即使开启，也仅允许在私聊中、admin_list 管理员调用",
+        "default": false
+    },
+    "enable_admin_check": {
+        "description": "默认开启：仅 admin_list 成员可调用任何 QQ 工具",
+        "type": "bool",
+        "hint": "关闭后仅需 群管理 / 消息 / 信息 / 敏感凭证 4 个总开关生效",
+        "default": true
+    },
+    "allow_admin_cross_group": {
+        "description": "允许 admin_list 管理员在群聊中跨群操作（默认关闭，禁止跨群）",
+        "type": "bool",
+        "hint": "群成员通过 Agent 调工具时，target group_id 必须等于当前群",
+        "default": false
+    },
+    "admin_list": {
+        "description": "管理员 QQ 号列表",
+        "type": "template_list",
+        "hint": "默认配置下，仅列表中的 QQ 可调用本插件工具",
+        "default": [],
+        "templates": {
+            "admin": {
+                "name": "管理员",
+                "display_item": "qq",
+                "items": {
+                    "qq": {
+                        "description": "QQ 号",
+                        "type": "string",
+                        "default": ""
+                    }
+                }
+            }
+        }
+    }
+}

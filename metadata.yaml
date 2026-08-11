@@ -1,0 +1,9 @@
+name: astrbot_plugin_qqtools
+desc: QQ 全功能工具集，AI 可通过 Agent 调用群管理、消息发送、信息查询、账号凭证等能力（仅支持 aiocqhttp / OneBot v11）
+display_name: QQ 工具集
+version: 1.0.0
+author: 小星萤
+repo: "https://github.com/firefiy99/astrbot_plugin_qqtools"
+support_platforms:
+  - aiocqhttp
+astrbot_version: ">=4.16, <5"
